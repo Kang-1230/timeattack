@@ -21,7 +21,6 @@ const Content = ({ setcountry, country }) => {
         <button onClick={handleDeleteCountry}>삭제</button>
       </>;
       setcountry([...country, event]);
-      // 뭘 넣어야 하지?
     } else {
       alert("이미 등록된 국가입니다");
       return;
@@ -34,13 +33,21 @@ const Content = ({ setcountry, country }) => {
   const handleUpdateCountry = (event) => {
     event.preventDefault();
     const newCountry = setcountry.find((event) => {
-      return name === event.name;
+      setcountry.map(){
+        if (name === event.name){
+            return setcountry();
+        } else {
+            return country;
+        }
+      }
     });
-    setcountry();
+    setcountry(newCountry);
   };
   // 기존 리스트에서 다른 점을 바꿔야 해
   // find로 기존 리스트에서 이름이 같은 것을 찾아
   // 그리고 기존 리스트 새로운 값으로 덮어씌워 어케 덮어씌우노
+  // 기존 배열 안에서 객체 하나만 바뀔 수 있나?
+  // 아니면 새로운 값으로 아예 바꾸면 되나?
 
   //setState를 정확히 어떻게 써야 하지?
 

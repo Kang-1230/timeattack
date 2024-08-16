@@ -24,8 +24,8 @@ function App() {
   return (
     <>
       <Header />
-      <Content props{setcountry, country}/>
-      <List props{country}/>
+      <Content props = {setcountry, country}/>
+      <List props = {country}/>
       <Footer />
     </>
   );
